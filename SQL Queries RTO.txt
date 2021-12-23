@@ -1,0 +1,76 @@
+admin -> admin table username psword
+users ->theuser table username password
+new vehicle registration -> users table
+old vehicle registraion -> oldusers table
+
+Query 1
+
+create database rto;
+use rto;
+
+oldusers rable
+
+CREATE TABLE `oldusers` (   `id` int NOT NULL AUTO_INCREMENT,   `ownerName` varchar(120) DEFAULT NULL,   `aadharNum` varchar(20) DEFAULT NULL,   `kmsRan` varchar(30) DEFAULT NULL,   `vehicleType` varchar(30) DEFAULT NULL,   `modelName` varchar(50) DEFAULT NULL,   `manufacName` varchar(120) DEFAULT NULL,   `manufacDate` varchar(20) DEFAULT NULL,   `chasisNum` varchar(20) DEFAULT NULL,   `engineNum` varchar(30) DEFAULT NULL,   `color` varchar(10) DEFAULT NULL,   `seatingCap` varchar(2) DEFAULT NULL,   `numOfWheels` varchar(15) DEFAULT NULL,   `typeOfFuel` varchar(10) DEFAULT NULL,   `status` varchar(20) DEFAULT NULL,   `insurancePolicyNum` varchar(30) DEFAULT NULL,   `insuranceCompany` varchar(30) DEFAULT NULL,   `permVehicleNum` varchar(30) DEFAULT NULL,   `regExpiryDate` varchar(20) DEFAULT NULL,   `newRegDate` varchar(20) DEFAULT NULL,   `newRegEndDate` varchar(20) DEFAULT NULL,   `regpayment` varchar(50) DEFAULT NULL,   `PUCNo` varchar(50) DEFAULT NULL,   `PUCissueDt` varchar(50) DEFAULT NULL,   `PUCexpDt` varchar(50) DEFAULT NULL,   `newPermVehicleNum` varchar(50) DEFAULT NULL,   `path` varchar(255) DEFAULT NULL,   PRIMARY KEY (`id`) ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+Query 2
+ users table
+
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `ownerName` varchar(120) DEFAULT NULL,
+  `aadharNum` varchar(20) DEFAULT NULL,
+  `tempNum` varchar(30) DEFAULT NULL,
+  `vehicleType` varchar(30) DEFAULT NULL,
+  `modelName` varchar(50) DEFAULT NULL,
+  `manufacName` varchar(120) DEFAULT NULL,
+  `manufacDate` varchar(20) DEFAULT NULL,
+  `chasisNum` varchar(20) DEFAULT NULL,
+  `engineNum` varchar(30) DEFAULT NULL,
+  `color` varchar(10) DEFAULT NULL,
+  `seatingCap` varchar(2) DEFAULT NULL,
+  `numOfWheels` varchar(15) DEFAULT NULL,
+  `typeOfFuel` varchar(10) DEFAULT NULL,
+  `status` varchar(20) DEFAULT NULL,
+  `insurancePolicyNum` varchar(30) DEFAULT NULL,
+  `insuranceCompany` varchar(30) DEFAULT NULL,
+  `permVehicleNum` varchar(30) DEFAULT NULL,
+  `regDate` varchar(20) DEFAULT NULL,
+  `regEndDate` varchar(20) DEFAULT NULL,
+  `taxpaymentPlusregpayment` varchar(50) DEFAULT NULL,
+  `path` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+Query 3
+the user table
+CREATE TABLE `theuser` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(20) DEFAULT NULL,
+  `last_name` varchar(20) DEFAULT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `psword` varchar(20) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `address` varchar(20) DEFAULT NULL,
+  `contact` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+Query 4
+admin table
+CREATE TABLE `admin` (
+  `id` int NOT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `first_name` varchar(20) DEFAULT NULL,
+  `last_name` varchar(20) DEFAULT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  `address` varchar(20) DEFAULT NULL,
+  `contact` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+Query 5
+Insert into admin table
+'1', 'admin', 'admin', 'master', 'adminmaster@gmail.com', '9999', 'abc', '9080706050'
